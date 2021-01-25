@@ -41,7 +41,7 @@ public class FTSE100Test {
 				By.xpath("//a[@title='View fallers']")));
 		driver.findElement(By.xpath("//a[@title='View fallers']")).click();
 	
-	}
+	} 
 		
 
 
