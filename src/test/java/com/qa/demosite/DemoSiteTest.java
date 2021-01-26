@@ -43,9 +43,11 @@ public class DemoSiteTest {
 		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(username);
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
 		driver.findElement(By.xpath("//input[@value='Test Login']")).submit();
-		
-		
+
+		// end wait
+		Thread.sleep(5000);
 	}
+	
 	
 	@AfterAll
 	public static void tearDown() {

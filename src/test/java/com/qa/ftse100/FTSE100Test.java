@@ -40,6 +40,10 @@ public class FTSE100Test {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//a[@title='View fallers']")));
 		driver.findElement(By.xpath("//a[@title='View fallers']")).click();
+		
+
+		// end wait
+		Thread.sleep(5000);
 	
 	} 
 		

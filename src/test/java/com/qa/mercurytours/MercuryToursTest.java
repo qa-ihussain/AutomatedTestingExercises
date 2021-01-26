@@ -42,6 +42,10 @@ public class MercuryToursTest {
 		driver.findElement(By.xpath("//input[@name='userName']")).sendKeys(username);
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
 		driver.findElement(By.name("submit")).click();
+		
+
+		// end wait
+		Thread.sleep(5000);
 
 	}
 
