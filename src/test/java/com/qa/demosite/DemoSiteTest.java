@@ -25,20 +25,23 @@ public class DemoSiteTest {
 	@Test
 	public void test() throws InterruptedException {
 		driver.get("http://thedemosite.co.uk");
-		String uName = "guest";
-		String pwd = "guest";
+		String username = "guest";
+		String password = "guest";
 		
-		
+		// Go to add user
 		driver.findElement(By.xpath("//a[@href='addauser.php']")).click();
 		
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(uName);
-		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(pwd);
-		
+		// creating username and password 
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(username);
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
 		driver.findElement(By.xpath("//input[@value='save']")).submit();
+		
+		// Go to login page
 		driver.findElement(By.xpath("//a[@href='login.php']")).click();
 		
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(uName);
-		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(pwd);
+		// enter login details
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(username);
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
 		driver.findElement(By.xpath("//input[@value='Test Login']")).submit();
 		
 		
